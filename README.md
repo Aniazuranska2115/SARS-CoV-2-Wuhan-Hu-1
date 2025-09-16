@@ -39,6 +39,9 @@ Do uruchomienia potrzebne jest **Conda** (np. Miniconda/Miniforge) i **Snakemake
   data/SAMN33344176.fastq.gz
   ```
 - Pobierz genom referencyjny **NC_045512.2** i umieść w katalogu `references/`:
+
+- wget -O references/NC_045512.2.fa "https://www.ncbi.nlm.nih.gov/search/api/download-sequence/?db=nuccore&id=NC_045512.2"
+
   ```
   references/NC_045512.2.fa
   ```
