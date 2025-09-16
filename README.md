@@ -1,26 +1,26 @@
 # SARS-CoV-2 Variant Analysis Pipeline
 
 Projekt zaliczeniowy do przedmiotu *Zarządzanie procesami analizy danych* (2024/2025).  
-Celem projektu jest implementacja potoku analizy wariantów genetycznych wirusa SARS-CoV-2 z wykorzystaniem **Snakemake** i środowisk **Conda (opcja B: per-rule envs)**.
+Celem projektu jest implementacja potoku analizy wariantów genetycznych wirusa SARS-CoV-2 z wykorzystaniem **Snakemake** i środowisk **Conda **.
 
 ---
 
-## 📂 Struktura katalogów
+##  Struktura katalogów
 ```
-data/         # pliki FASTQ (np. SAMN33344176.fastq.gz)
-references/   # genom referencyjny (NC_045512.2.fa)
-results/      # wyniki analizy (tworzone automatycznie)
-Snakefile     # definicja workflow
-config.yaml   # konfiguracja próbek i referencji
-envs/         # pliki environment (per-rule conda)
+data/         # 
+references/   # 
+results/      # 
+Snakefile     # 
+config.yaml   # 
+envs/         # 
 ```
 
 ---
 
-## ⚙️ Przygotowanie środowiska
+## ⚙ Przygotowanie środowiska
 Do uruchomienia potrzebne jest **Conda** (np. Miniconda/Miniforge) i **Snakemake**.
 
-1. Zainstaluj Conda (jeśli jeszcze nie masz).
+1. Zainstaluj Conda.
 2. Stwórz bazowe środowisko tylko z `snakemake`:
    ```bash
    conda create -c conda-forge -c bioconda -n snakemake snakemake
@@ -30,7 +30,7 @@ Do uruchomienia potrzebne jest **Conda** (np. Miniconda/Miniforge) i **Snakemake
 
 ---
 
-## 📥 Dane wejściowe
+## 📥Dane wejściowe
 - Pobierz plik FASTQ odpowiadający próbce **SAMN33344176** i umieść w katalogu `data/`:
   ```
   data/SAMN33344176.fastq.gz
@@ -47,7 +47,7 @@ Do uruchomienia potrzebne jest **Conda** (np. Miniconda/Miniforge) i **Snakemake
 
 ---
 
-## ▶️ Uruchamianie workflow
+## ▶ Uruchamianie workflow
 
 ### 1. Suchy bieg (sprawdzenie reguł, bez uruchamiania):
 ```bash
@@ -71,7 +71,7 @@ snakemake --dag | dot -Tpng > dag.png
 
 ---
 
-## 📊 Wyniki (w katalogu `results/`)
+##  Wyniki (w katalogu `results/`)
 - `qc/` — kontrola jakości (FastQC, MultiQC)  
 - `trim/` — przycięte sekwencje (fastp)  
 - `*.sorted.bam` i indeksy BAM (BWA + Samtools)  
