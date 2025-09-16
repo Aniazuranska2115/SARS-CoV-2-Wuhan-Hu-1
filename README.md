@@ -32,16 +32,16 @@ Do uruchomienia potrzebne jest **Conda** (np. Miniconda/Miniforge) i **Snakemake
 
 ## 📥Dane wejściowe
 - Pobierz plik FASTQ odpowiadający próbce **SAMN33344176** i umieść w katalogu `data/`:
-- 
-- mkdir -p data && for run in SRR23609077 SRR23609078 SRR23609079 SRR23609080 SRR23609081 SRR23609082 SRR23609083 SRR23609084 SRR23609085 SRR23609086; do fasterq-dump "$run" -O data/ --split-files; done
-
+  ```
+  mkdir -p data && for run in SRR23609077 SRR23609078 SRR23609079 SRR23609080 SRR23609081 SRR23609082 SRR23609083 SRR23609084 SRR23609085 SRR23609086; do fasterq-dump "$run" -O data/ --split-files; done
+  ```
   ```
   data/SAMN33344176.fastq.gz
   ```
 - Pobierz genom referencyjny **NC_045512.2** i umieść w katalogu `references/`:
-
-- wget -O references/NC_045512.2.fa "https://www.ncbi.nlm.nih.gov/search/api/download-sequence/?db=nuccore&id=NC_045512.2"
-
+  ```
+ wget -O references/NC_045512.2.fa "https://www.ncbi.nlm.nih.gov/search/api/download-sequence/?db=nuccore&id=NC_045512.2"
+  ```
   ```
   references/NC_045512.2.fa
   ```
